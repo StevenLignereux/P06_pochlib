@@ -1,0 +1,25 @@
+{
+  "name": "p06_pochlib_v2",
+  "version": "1.0.0",
+  "description": "a webb app for search books in the catalog of the library",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevenLignereux/P06_Pochlib_v2"
+  },
+  "bugs": {
+    "url": "https://github.com/StevenLignereux/P06_poch_lib/issues"
+  },
+  "main": "main.js",
+  "scripts": {
+    "sass": "sass --watch ./app/scss/main.scss:./css/style.css"
+  },
+  "keywords": [
+    "html",
+    "javascript",
+    "scss",
+    "api",
+    "book"
+  ],
+  "author": "Steven Lignereux",
+  "license": "ISC"
+}
