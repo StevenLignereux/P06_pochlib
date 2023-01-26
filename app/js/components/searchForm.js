@@ -1,6 +1,11 @@
+import {addResultDiv} from "./resultDiv.js";
+import {searchAPI} from "./searchAPI.js";
+
+
 /*crée un formulaire avec deux champs de saisie pour le titre et l'auteur d'un livre. Les deux champs ont l'attribut ' +
 '"required" pour s'assurer qu'ils ne sont pas vides lors de la soumission. Il y a également un bouton de soumission avec ' +
 'le texte "Rechercher" pour envoyer le formulaire.*/
+
 export function createSearchForm() {
     let form = document.createElement("form");
     form.setAttribute("id", "searchForm");
@@ -24,6 +29,7 @@ export function createSearchForm() {
     // create submit button
     let submitBtn = document.createElement("button");
     submitBtn.classList.add("button", "button--green", "button__text");
+    submitBtn.id = "search-button";
     submitBtn.setAttribute("type", "submit");
     submitBtn.innerHTML = "Rechercher";
     form.appendChild(submitBtn);
@@ -39,8 +45,14 @@ export function createSearchForm() {
 
     // add form to the HTML
     let parent = document.querySelector("#content");
-    let hr = document.querySelector("hr");
     parent.insertAdjacentElement("beforebegin", form);
+
+    document.getElementById("search-button").addEventListener("click", (evt) => {
+        evt.preventDefault();
+        addResultDiv();
+        searchAPI();
+    });
+
 
 
 }
