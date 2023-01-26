@@ -9,15 +9,13 @@
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   transition: all 0.2s ease-in-out;
+  &__text {
+    color: white;
+  }
+  &--green {
+    background-color: darkgreen;
+    &__text {
+      color: white;
+    }
+  }
 }
-.button__text {
-  color: white;
-}
-.button--green {
-  background-color: darkgreen;
-}
-.button--green__text {
-  color: white;
-}
-
-/*# sourceMappingURL=style.css.map */
