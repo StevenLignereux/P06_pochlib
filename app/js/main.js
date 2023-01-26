@@ -2,4 +2,4 @@
 // Appel de la fonction
 import {createAddBookButton} from "./components/addBookButton.js";
 
-createAddBookButton();
+document.addEventListener("DOMContentLoaded", createAddBookButton);
