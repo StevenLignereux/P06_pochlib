@@ -1,8 +1,9 @@
+
+
 export function addResultDiv() {
     const form = document.getElementById("searchForm");
-
-
     const resultDiv = document.createElement("div");
+
 
     resultDiv.id = "result-div";
 

@@ -1,5 +1,7 @@
-import {addResultDiv} from "./resultDiv.js";
-import {searchAPI} from "./searchAPI.js";
+import {addResultDiv} from "../functions/resultDiv.js";
+import {searchAPI} from "../functions/searchAPI.js";
+import {clearResultDiv} from "../functions/clearResults.js";
+
 
 
 /*crée un formulaire avec deux champs de saisie pour le titre et l'auteur d'un livre. Les deux champs ont l'attribut ' +
@@ -49,6 +51,7 @@ export function createSearchForm() {
 
     document.getElementById("search-button").addEventListener("click", (evt) => {
         evt.preventDefault();
+        clearResultDiv();
         addResultDiv();
         searchAPI();
     });
