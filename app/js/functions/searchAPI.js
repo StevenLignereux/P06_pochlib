@@ -33,15 +33,17 @@ export function searchAPI() {
                 const description = book.volumeInfo.description ? book.volumeInfo.description.slice(0, 200) + "..." : "Information manquante";
                 let thumbnail = "";
                 if (book.volumeInfo.imageLinks) {
-                    thumbnail = `<img src="${book.volumeInfo.imageLinks.thumbnail}" alt="${book.volumeInfo.imageLinks.thumbnail}">`;
+                    thumbnail = `<img class="card__image" src="${book.volumeInfo.imageLinks.thumbnail}" alt="${book.volumeInfo.imageLinks.thumbnail}">`;
                 }
                 resultDiv.innerHTML += `
-                    <div class="result-div__book">
-                        <p>${id}</p>
-                        <h3>${title}</h3>
-                        <p>${author}</p>
-                        <i class="fas fa-bookmark"></i>
-                        <p>${description}</p>
+                    <div class="result-div__book card">
+                        <div class="heading">
+                            <h3 class="card__title">${title}</h3>
+                            <i class="fa-regular fa-bookmark card__bookmark"></i>
+                        </div>
+                        <h3 class="card__title">${id}</h3>
+                        <p class="card__author">${author}</p>
+                        <p class="card__description">${description}</p>
                         ${thumbnail}
                     </div>
                 `;

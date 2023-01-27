@@ -1,0 +1,22 @@
+// Mobile First Breakpoints
+$break-small: 576px;
+$break-medium: 768px;
+$break-large: 992px;
+$break-xlarge: 1200px;
+
+// Media Queries
+@media (min-width: $break-small) {
+  // Styles for small screens and up
+}
+
+@media (min-width: $break-medium) {
+  // Styles for medium screens and up
+}
+
+@media (min-width: $break-large) {
+  // Styles for large screens and up
+}
+
+@media (min-width: $break-xlarge) {
+  // Styles for extra large screens
+}

@@ -6,6 +6,7 @@ export function addResultDiv() {
 
 
     resultDiv.id = "result-div";
+    resultDiv.className = "search-result";
 
     const hr = document.createElement("hr");
     resultDiv.appendChild(hr);
