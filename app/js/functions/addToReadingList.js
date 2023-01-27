@@ -9,7 +9,7 @@ export function addToReadingList(event) {
     bookItem.innerHTML = `<h3>${bookData.bookTitle}</h3>
                         <p>Auteur : ${bookData.bookAuthor}</p>
                         <p>${bookData.bookDescription}</p>
-                        <div>${bookData.bookThumbnail}</div>`;
+                        `;
 
     // Ajout de l'élément à la poch'liste
     let readingList = document.getElementById('content');

@@ -36,9 +36,9 @@ export function searchAPI() {
                 const description = book.volumeInfo.description ? book.volumeInfo.description.slice(0, 200) + "..." : "Information manquante";
                 let thumbnail = "";
                 if (book.volumeInfo.imageLinks) {
-                    thumbnail = `<img class="card__image" data-book-thumbnail="${thumbnail}" src="${book.volumeInfo.imageLinks.thumbnail}" alt="${book.volumeInfo.imageLinks.thumbnail}">`;
+                    thumbnail = book.volumeInfo.imageLinks.thumbnail;
                 } else {
-                    thumbnail = `<img class="card__unavailable" src="../../../assets/images/unavailable.png" data-book-thumbnail="${thumbnail}" alt="Aucune image disponible pour ce livre">`;
+                    thumbnail = "../../../assets/images/unavailable.png";
                 }
                 resultDiv.innerHTML += `
                     <div class="result-div__book card">
@@ -49,7 +49,7 @@ export function searchAPI() {
                         <h3 class="card__title" >${id}</h3>
                         <p class="card__author" >${author}</p>
                         <p class="card__description">${description}</p>
-                        ${thumbnail}
+                        <img class="card__image" data-book-thumbnail="${thumbnail}" src="${thumbnail}" alt="${thumbnail}">
                     </div>
                 `;
 
