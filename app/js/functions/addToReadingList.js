@@ -3,6 +3,14 @@ export function addToReadingList(event) {
     let bookData = event.target.parentElement.dataset;
     console.log(bookData)
 
+    // Stockage en session
+    if(sessionStorage) {
+        // Stocker les données dans le sessionStorage
+        sessionStorage.setItem(bookData.title, JSON.stringify(bookData));
+    } else {
+        console.log("SessionStorage n'est pas supporté par votre navigateur");
+    }
+
     // Création de l'élément HTML représentant le livre dans la poch'liste
     let bookItem = document.createElement('div');
     bookItem.classList.add('reading-list__book');
@@ -22,5 +30,7 @@ export function addToReadingList(event) {
     // Ajout de l'élément à la poch'liste
     let readingList = document.getElementById('content');
     readingList.appendChild(bookItem);
+
+
 }
 
