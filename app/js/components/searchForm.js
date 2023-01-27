@@ -54,6 +54,7 @@ export function createSearchForm() {
         clearResultDiv();
         addResultDiv();
         searchAPI();
+
     });
 
     // Erase result

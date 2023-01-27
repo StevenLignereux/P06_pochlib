@@ -1,3 +1,6 @@
+import {addToReadingList} from "./addToReadingList.js";
+
+
 export function searchAPI() {
     // Récupération des valeurs des champs de recherche
     const title = document.getElementById('titleInput').value;
@@ -33,24 +36,30 @@ export function searchAPI() {
                 const description = book.volumeInfo.description ? book.volumeInfo.description.slice(0, 200) + "..." : "Information manquante";
                 let thumbnail = "";
                 if (book.volumeInfo.imageLinks) {
-                    thumbnail = `<img class="card__image" src="${book.volumeInfo.imageLinks.thumbnail}" alt="${book.volumeInfo.imageLinks.thumbnail}">`;
+                    thumbnail = `<img class="card__image" data-book-thumbnail="${thumbnail}" src="${book.volumeInfo.imageLinks.thumbnail}" alt="${book.volumeInfo.imageLinks.thumbnail}">`;
                 } else {
-                    thumbnail = `<img class="card__unavailable" src="../../../assets/images/unavailable.png" alt="Aucune image disponible pour ce livre">`;
+                    thumbnail = `<img class="card__unavailable" src="../../../assets/images/unavailable.png" data-book-thumbnail="${thumbnail}" alt="Aucune image disponible pour ce livre">`;
                 }
                 resultDiv.innerHTML += `
                     <div class="result-div__book card">
-                        <div class="heading">
+                        <div class="heading" data-book-title="${title}" data-book-id="${id}"  data-book-author="${author}" data-book-description="${description}">
                             <h3 class="card__title">${title}</h3>
                             <i class="fa-regular fa-bookmark card__bookmark"></i>
                         </div>
-                        <h3 class="card__title">${id}</h3>
-                        <p class="card__author">${author}</p>
+                        <h3 class="card__title" >${id}</h3>
+                        <p class="card__author" >${author}</p>
                         <p class="card__description">${description}</p>
                         ${thumbnail}
                     </div>
                 `;
             }
+
+            addToReadingList("click");
         });
+
+
+
+
 }
 
 
