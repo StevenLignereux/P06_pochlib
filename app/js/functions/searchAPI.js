@@ -14,8 +14,6 @@ export function searchAPI() {
         return;
     }
 
-    // clearResultDiv();
-
     // Requête à l'API de Google Books
     const url = `https://www.googleapis.com/books/v1/volumes?q=${title}+inauthor:${author}`;
     fetch(url)
@@ -60,9 +58,7 @@ export function searchAPI() {
                 }
             }
 
-
         });
-
 
 }
 
