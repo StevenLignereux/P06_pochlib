@@ -42,7 +42,7 @@ export function searchAPI() {
                 }
                 resultDiv.innerHTML += `
                     <div class="result-div__book card">
-                        <div class="heading" data-book-title="${title}" data-book-id="${id}"  data-book-author="${author}" data-book-description="${description}">
+                        <div class="heading"  data-book-id="${id}" data-book-title="${title}"  data-book-author="${author}" data-book-description="${description}" data-book-thubmbnail="${thumbnail}" >
                             <h3 class="card__title">${title}</h3>
                             <i class="fa-regular fa-bookmark card__bookmark"></i>
                         </div>
@@ -52,12 +52,16 @@ export function searchAPI() {
                         ${thumbnail}
                     </div>
                 `;
+
+                // Attachement de l'écouteur d'événement sur les icônes bookmark
+                let bookmarks = document.getElementsByClassName('card__bookmark');
+                for (let bookmark of bookmarks) {
+                    bookmark.addEventListener('click', addToReadingList);
+                }
             }
 
-            addToReadingList("click");
+
         });
-
-
 
 
 }
