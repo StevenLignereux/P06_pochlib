@@ -23,6 +23,10 @@
     max-width: 100%;
   }
 
+  &__unavailable {
+    max-width: 30%;
+  }
+
   &__description {
     text-align: justify;
   }

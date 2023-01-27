@@ -34,6 +34,8 @@ export function searchAPI() {
                 let thumbnail = "";
                 if (book.volumeInfo.imageLinks) {
                     thumbnail = `<img class="card__image" src="${book.volumeInfo.imageLinks.thumbnail}" alt="${book.volumeInfo.imageLinks.thumbnail}">`;
+                } else {
+                    thumbnail = `<img class="card__unavailable" src="../../../assets/images/unavailable.png" alt="Aucune image disponible pour ce livre">`;
                 }
                 resultDiv.innerHTML += `
                     <div class="result-div__book card">

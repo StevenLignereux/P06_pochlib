@@ -87,6 +87,9 @@ body {
 .card__image {
   max-width: 100%;
 }
+.card__unavailable {
+  max-width: 30%;
+}
 .card__description {
   text-align: justify;
 }
