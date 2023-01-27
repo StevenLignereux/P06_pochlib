@@ -49,13 +49,24 @@ export function createSearchForm() {
     let parent = document.querySelector("#content");
     parent.insertAdjacentElement("beforebegin", form);
 
-    document.getElementById("search-button").addEventListener("click", (evt) => {
+    submitBtn.addEventListener("click", (evt) => {
         evt.preventDefault();
         clearResultDiv();
         addResultDiv();
         searchAPI();
     });
 
+    // Erase result
+    cancelButton.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        clearResultDiv();
+
+        titleInput.value = "";
+        authorInput.value = "";
+
+        // Supprime le formulaire
+        form.remove();
+    });
 
 
 }
