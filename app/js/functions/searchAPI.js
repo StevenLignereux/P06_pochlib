@@ -1,11 +1,12 @@
 import {addToReadingList} from "./addToReadingList.js";
 
 
+
 export function searchAPI() {
     // Récupération des valeurs des champs de recherche
     const title = document.getElementById('titleInput').value;
     const author = document.getElementById('authorInput').value;
-    const resultDiv = document.getElementById("result-div");
+    let resultDiv = document.getElementById("result-div");
 
 
     // Vérification que les champs de recherche ne sont pas vides
@@ -50,6 +51,8 @@ export function searchAPI() {
                         <img class="card__image" data-book-thumbnail="${thumbnail}" src="${thumbnail}" alt="${thumbnail}">
                     </div>
                 `;
+
+
 
                 // Attachement de l'écouteur d'événement sur les icônes bookmark
                 let bookmarks = document.getElementsByClassName('card__bookmark');

@@ -1,19 +1,18 @@
 import {createAddBookButton} from "./components/addBookButton.js";
 
-document.addEventListener("DOMContentLoaded", createAddBookButton);
+document.addEventListener("DOMContentLoaded", () => {
+    createAddBookButton();
 
-// Au chargement de la page
-window.onload = () => {
-
-    // Vérifier si l'objet "books" existe dans le sessionStorage
+    // Récupérer les livres stockés en session
     let books = JSON.parse(sessionStorage.getItem("books")) || [];
+
+    // Vérifier s'il y a des livres dans la liste de lecture
     if (books.length > 0) {
-        // Récupérer les livres stockés et les afficher dans la liste de lecture
+        // Boucle pour afficher tous les livres stockés
         for (let i = 0; i < books.length; i++) {
             let book = JSON.parse(books[i]);
-            console.log(book);
 
-            // Création de l'élément HTML représentant le livre dans la poch'liste
+            // Création de l'élément HTML représentant le livre dans la liste de lecture
             let bookItem = document.createElement('div');
             bookItem.classList.add('reading-list__book');
             bookItem.innerHTML = `
@@ -27,10 +26,10 @@ window.onload = () => {
                 <p class="card__description">${book.bookDescription}</p>
                 <img class="card__image" data-book-thumbnail="${book.bookThumbnail}" src="${book.bookThumbnail}" alt="${book.bookThumbnail}">
             </div>`;
+
+            // Ajout de l'élément à la liste de lecture
             let readingList = document.getElementById('content');
             readingList.appendChild(bookItem);
         }
     }
-}
-
-
+});
