@@ -17,7 +17,7 @@ export function createSearchForm() {
     titleInput.setAttribute("type", "text");
     titleInput.setAttribute("id", "titleInput");
     titleInput.setAttribute("placeholder", "Titre du livre");
-    titleInput.setAttribute("required", "");
+    titleInput.required = true;
     form.appendChild(titleInput);
 
     // create author input
@@ -25,7 +25,7 @@ export function createSearchForm() {
     authorInput.setAttribute("type", "text");
     authorInput.setAttribute("id", "authorInput");
     authorInput.setAttribute("placeholder", "Auteur du livre");
-    authorInput.setAttribute("required", "");
+    authorInput.required = true;
     form.appendChild(authorInput);
 
     // create submit button
@@ -39,6 +39,7 @@ export function createSearchForm() {
     // create a cancel button
     const cancelButton = document.createElement('button');
     cancelButton.classList.add('button', 'button--cancel');
+    cancelButton.id = "cancel-button"
     cancelButton.textContent = 'Annuler';
 
 // append cancel button to the form

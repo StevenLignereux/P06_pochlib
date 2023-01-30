@@ -1,10 +1,12 @@
+import {removeFromReadingList} from "./removeFromReadingList.js";
+
 export function displayBooks() {
     // Récupération des livres stockés en session
     let booksList = JSON.parse(sessionStorage.getItem("books")) || [];
 
     // Boucle pour afficher tous les livres stockés
     for (let i = 0; i < booksList.length; i++) {
-        let book = booksList[i];
+        let book = JSON.parse(booksList[i]);
 
         // Création de l'élément HTML représentant le livre dans la poch'liste
         let bookItem = document.createElement("div");
@@ -14,7 +16,7 @@ export function displayBooks() {
       <div class="result-div__book card">
         <div class="heading">
           <h3 class="card__title">${book.bookTitle}</h3>
-          <i class="fa-solid fa-trash card__bookmark"></i>
+          <i class="fa-solid fa-trash card__bookmark" id="trash"></i>
         </div>
         <h3 class="card__title">${book.bookId}</h3>
         <p class="card__author">${book.bookAuthor}</p>
@@ -32,4 +34,9 @@ export function displayBooks() {
         let readingList = document.getElementById("content");
         readingList.appendChild(bookItem);
     }
+
+
+
+    document.addEventListener('click', removeFromReadingList);
+
 }

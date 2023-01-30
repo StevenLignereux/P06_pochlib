@@ -7,6 +7,7 @@ Une application web pour chercher des livres dans le catalogue de la librairie '
 ```bash
     git clone https://github.com/StevenLignereux/P06_Pochlib_v2.git
 ```
+
 2. Assurez-vous d'avoir installé [Node.js](https://nodejs.org/en/) sur votre ordinateur
 
 3. Ouvrez un terminal et naviguez jusqu'au répertoire du projet

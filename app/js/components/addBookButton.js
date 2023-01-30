@@ -2,6 +2,8 @@
 
 import {createSearchForm} from "./searchForm.js";
 
+let displayForm = false;
+
 export function createAddBookButton() {
     let btn = document.createElement("button");
     btn.classList.add("button", "button--green");
@@ -13,7 +15,6 @@ export function createAddBookButton() {
     'le formulaire de recherche de livre.*/
     const addBookBtn = document.querySelector('.button--green');
 
-    let displayForm = false;
 
     addBookBtn.addEventListener("click", function () {
         if (displayForm !== true) {
@@ -21,6 +22,15 @@ export function createAddBookButton() {
             displayForm = true;
         }
     });
+
+    // si le clic a eu lieu sur un élément qui a la classe search-form__cancel la variable displayForm sera réinitialisée à false,
+    document.addEventListener("click", () => {
+        const cancelButton = document.getElementById("cancel-button");
+        if (cancelButton) {
+            displayForm = false;
+        }
+    });
+
 }
 
 
