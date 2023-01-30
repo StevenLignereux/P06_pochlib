@@ -26,6 +26,8 @@ Pour lancer l'application en mode développement, tapez la commande suivante dan
     npm run sass
 ```
 
+Puis lancer le projet à partir d'un ***serveur local***
+
 
 ## Auteur
 Steven Lignereux
