@@ -13,8 +13,13 @@ export function createAddBookButton() {
     'le formulaire de recherche de livre.*/
     const addBookBtn = document.querySelector('.button--green');
 
-    addBookBtn.addEventListener("click", function() {
-        createSearchForm();
+    let displayForm = false;
+
+    addBookBtn.addEventListener("click", function () {
+        if (displayForm !== true) {
+            createSearchForm();
+            displayForm = true;
+        }
     });
 }
 
