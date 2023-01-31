@@ -10,13 +10,40 @@ $break-xlarge: 1200px;
 }
 
 @media (min-width: $break-medium) {
-  // Styles for medium screens and up
+  #searchForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+    flex-direction: column;
+  }
+
+  input {
+    flex: 1;
+    margin-right: 10px;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  #search-button {
+    justify-content: left;
+  }
 }
 
 @media (min-width: $break-large) {
-  // Styles for large screens and up
+  #searchForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+  }
 }
 
 @media (min-width: $break-xlarge) {
-  // Styles for extra large screens
+  #searchForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+  }
 }

@@ -3,6 +3,10 @@ body {
   font-family: "Roboto Condensed", serif;
 }
 
+#myBooks {
+  text-align: center;
+}
+
 .title {
   text-align: center;
   font-weight: 100;
@@ -71,6 +75,74 @@ body {
   margin: 0 10px;
 }
 
+@media (min-width: 768px) {
+  #searchForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+    flex-direction: column;
+  }
+  input {
+    flex: 1;
+    margin-right: 10px;
+    align-items: flex-start;
+    width: 100%;
+  }
+  #search-button {
+    justify-content: left;
+  }
+}
+@media (min-width: 992px) {
+  #searchForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+  }
+}
+@media (min-width: 1200px) {
+  #searchForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+  }
+}
+@media (min-width: 768px) {
+  #searchForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+    flex-direction: column;
+  }
+  input {
+    flex: 1;
+    margin-right: 10px;
+    align-items: flex-start;
+    width: 100%;
+  }
+  #search-button {
+    justify-content: left;
+  }
+}
+@media (min-width: 992px) {
+  #searchForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+  }
+}
+@media (min-width: 1200px) {
+  #searchForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+  }
+}
 /* Card */
 .card {
   display: flex;

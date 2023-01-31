@@ -16,18 +16,20 @@ export function createAddBookButton() {
     const addBookBtn = document.querySelector('.button--green');
 
 
-    addBookBtn.addEventListener("click", function () {
-        if (displayForm !== true) {
+    addBookBtn.addEventListener("click",  () => {
+        if (!displayForm) {
             createSearchForm();
             displayForm = true;
+            btn.disabled = true;
         }
     });
 
     // si le clic a eu lieu sur un élément qui a la classe search-form__cancel la variable displayForm sera réinitialisée à false,
     document.addEventListener("click", () => {
         const cancelButton = document.getElementById("cancel-button");
-        if (cancelButton) {
+        if (cancelButton !== true) {
             displayForm = false;
+            btn.disabled = false;
         }
     });
 

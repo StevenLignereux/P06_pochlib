@@ -4,6 +4,12 @@ export function displayBooks() {
     // Récupération des livres stockés en session
     let booksList = JSON.parse(sessionStorage.getItem("books")) || [];
 
+    // Can be added inside function ( clearContentBookmark )
+    let readingList = document.getElementById("content");
+    while (readingList.children.length > 3) {
+        readingList.removeChild(readingList.lastChild);
+    }
+
     // Boucle pour afficher tous les livres stockés
     for (let i = 0; i < booksList.length; i++) {
         let book = JSON.parse(booksList[i]);
