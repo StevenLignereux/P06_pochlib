@@ -11,8 +11,6 @@ export function searchAPI() {
     // Vérification que les champs de recherche ne sont pas vides
     if (title === "" || author === "") {
         alert("Les champs de recherche ne peuvent pas être vides");
-
-
     } else {
         // Requête à l'API de Google Books
         const url = `https://www.googleapis.com/books/v1/volumes?q=${title}+inauthor:${author}`;
@@ -24,7 +22,8 @@ export function searchAPI() {
                     resultDiv.innerHTML = `<p>Aucun livre n'a été trouvé</p>`;
                     return;
                 }
-
+                const newDiv = document.createElement("div");
+                newDiv.setAttribute("id", "testAmol");
                 for (let i = 0; i < data.items.length; i++) {
 
                     const book = data.items[i];
@@ -38,7 +37,7 @@ export function searchAPI() {
                     } else {
                         thumbnail = "../../../assets/images/unavailable.png";
                     }
-                    resultDiv.innerHTML += `
+                    newDiv.innerHTML += `
                         <div class="cards">
                             <div class="result-div__book card ">
                                 <div class="heading"  data-book-id="${id}" data-book-title="${title}"  data-book-author="${author}" data-book-description="${description}" data-book-thumbnail="${thumbnail}" >
@@ -60,6 +59,8 @@ export function searchAPI() {
                         bookmark.addEventListener('click', addToReadingList);
                     }
                 }
+                
+                resultDiv.appendChild(newDiv);
 
             });
     }

@@ -3,29 +3,29 @@
 @import "../abstracts/variables";
 
 /* Card */
-.cards {
+#testAmol{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
 
+.cards {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  display: flex;
+  padding: 1rem;
+  margin: 0 10px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  border-radius: 0.5rem;
 
   .card {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: $card-padding;
-    margin: 0 ($card-gap / 2);
-    box-sizing: border-box;
-    box-shadow: $card-shadow;
-    border-radius: 0.5rem;
-
 
     &__title {
       margin-left: 1rem;
-
     }
-
 
     &__unavailable {
       max-width: 30%;
@@ -70,7 +70,7 @@
 
   @include breakpoints(sm) {
     .card {
-      width: 50%;
+      //width: 50%;
 
       &__image {
         max-width: 40%;
@@ -82,7 +82,7 @@
 
   @include breakpoints(lg){
     .card {
-      width: 25%;
+      //width: 30%;
 
       &__image {
         max-width: 70%;

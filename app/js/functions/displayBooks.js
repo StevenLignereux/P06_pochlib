@@ -6,7 +6,7 @@ export function displayBooks() {
 
     // Can be added inside function ( clearContentBookmark )
     let readingList = document.getElementById("content");
-    while (readingList.children.length > 3) {
+    while (readingList.children.length > 1) {
         readingList.removeChild(readingList.lastChild);
     }
 
