@@ -3,73 +3,91 @@
 @import "../abstracts/variables";
 
 /* Card */
-.card {
+.cards {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  padding: $card-padding;
-  margin: $card-margin;
-  box-shadow: $card-shadow;
-  border-radius: 0.5rem;
 
 
-
-  &__title {
-    margin-left: 1rem;
-
-  }
-
-  &__image {
-    max-width: 100%;
-  }
-
-  &__unavailable {
-    max-width: 30%;
-  }
-
-  &__description {
-    text-align: justify;
-  }
-
-  &__author {
-    font-style: italic;
-  }
-}
-
-.heading {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  h3 {
-    flex: 1;
-  }
-
-  i {
-    flex: 1;
-    font-size: 2rem;
-    margin-left: 4rem;
-  }
-}
-
-/* Search Results */
-.search-results {
-  @include breakpoints(md) {
+  .card {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-  }
+    align-items: center;
+    justify-content: center;
+    padding: $card-padding;
+    margin: 0 ($card-gap / 2);
+    box-sizing: border-box;
+    box-shadow: $card-shadow;
+    border-radius: 0.5rem;
 
-  .card {
-    @include breakpoints(md) {
-      width: calc(33.33% - 20px);
-      margin: 10px;
+
+    &__title {
+      margin-left: 1rem;
+
+    }
+
+
+    &__unavailable {
+      max-width: 30%;
+    }
+
+    &__description {
+      text-align: justify;
+    }
+
+    &__author {
+      font-style: italic;
     }
   }
-}
 
-@include breakpoints(xs) {
-  .card {
-    flex-direction: column;
+  .heading {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    h3 {
+      flex: 1;
+    }
+
+    i {
+      flex: 1;
+      font-size: 2rem;
+      margin-left: 4rem;
+    }
   }
 
+  /* Search Results */
+  .search-results {
+    @include breakpoints(md) {
+      display: flex;
+      flex-wrap: wrap;
+
+      .card {
+        width: 33.33%;
+      }
+    }
+  }
+
+  @include breakpoints(sm) {
+    .card {
+      width: 50%;
+
+      &__image {
+        max-width: 40%;
+      }
+    }
+
+
+  }
+
+  @include breakpoints(lg){
+    .card {
+      width: 25%;
+
+      &__image {
+        max-width: 70%;
+      }
+    }
+
+  }
 }
