@@ -16,27 +16,21 @@ export function displayBooks() {
 
         // Création de l'élément HTML représentant le livre dans la poch'liste
         let bookItem = document.createElement("div");
-        bookItem.classList.add("reading-list__book");
+        bookItem.setAttribute("id", "card-container")
 
-        bookItem.innerHTML = `
-        <div id="card-container">
-            <div class="cards">
+        bookItem.innerHTML += `
+             <div class="cards">
                 <div class="result-div__book card">
                     <div class="heading">
                         <h3 class="card__title">${book.bookTitle}</h3>
-                        <i class="fa-solid fa-trash card__bookmark" id="trash"></i>
+                         <i class="fa-solid fa-trash card__bookmark" id="trash"></i>
                     </div>
                     <h3 class="card__title">${book.bookId}</h3>
                     <p class="card__author">${book.bookAuthor}</p>
                     <p class="card__description">${book.bookDescription}</p>
-                    <img
-                        class="card__image"
-                        data-book-thumbnail="${book.bookThumbnail}"
-                        src="${book.bookThumbnail}"
-                        alt="${book.bookThumbnail}" />
+                    <img class="card__image" data-book-thumbnail="${book.bookThumbnail}" src="${book.bookThumbnail}" alt="${book.bookThumbnail}">
                 </div>
             </div>
-        </div>
     `;
 
         // Ajout de l'élément à la poch'liste
