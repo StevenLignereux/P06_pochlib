@@ -53,7 +53,11 @@ export function createSearchForm() {
     submitBtn.addEventListener("click", (evt) => {
         evt.preventDefault();
         clearResultDiv();
-        addResultDiv();
+
+        if (authorInput.value !== "" && titleInput.value !== ""){
+            addResultDiv();
+        }
+
         searchAPI();
 
     });
