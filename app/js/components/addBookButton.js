@@ -16,7 +16,7 @@ export function createAddBookButton() {
     const addBookBtn = document.querySelector('.button--green');
 
 
-    addBookBtn.addEventListener("click",  () => {
+    addBookBtn.addEventListener("click", () => {
         let resultDiv = document.getElementById("searchForm");
 
         // Remove resultDiv if already exist in order to avoid having multiple time result Div displaying

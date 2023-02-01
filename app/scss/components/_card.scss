@@ -1,9 +1,8 @@
-@import "../responsive/responsive";
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
 /* Card */
-#testAmol{
+#card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -13,7 +12,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 100%;
   display: flex;
   padding: 1rem;
   margin: 0 10px;
@@ -56,38 +55,39 @@
     }
   }
 
-  /* Search Results */
-  .search-results {
-    @include breakpoints(md) {
+
+  @include breakpoints(md) {
+    .search-results {
+
       display: flex;
       flex-wrap: wrap;
-
-      .card {
-        width: 33.33%;
-      }
-    }
-  }
-
-  @include breakpoints(sm) {
-    .card {
-      //width: 50%;
-
-      &__image {
-        max-width: 40%;
-      }
     }
 
-
-  }
-
-  @include breakpoints(lg){
-    .card {
-      //width: 30%;
-
-      &__image {
-        max-width: 70%;
-      }
+    .cards {
+      width: 45%;
     }
-
   }
 }
+
+@include breakpoints(sm) {
+  .cards {
+    width: 30%;
+
+    &__image {
+      max-width: 40%;
+    }
+  }
+
+}
+
+@include breakpoints(lg) {
+  .cards {
+    width: 30%;
+
+    .card__image {
+      max-width: 70%;
+    }
+  }
+
+}
+

@@ -23,7 +23,7 @@ export function searchAPI() {
                     return;
                 }
                 const newDiv = document.createElement("div");
-                newDiv.setAttribute("id", "testAmol");
+                newDiv.setAttribute("id", "card-container");
                 for (let i = 0; i < data.items.length; i++) {
 
                     const book = data.items[i];
@@ -52,13 +52,13 @@ export function searchAPI() {
                         </div>
                 `;
                 }
-                
+
                 resultDiv.appendChild(newDiv);
-                 // Attachement de l'écouteur d'événement sur les icônes bookmark
-                 let bookmarks = document.getElementsByClassName('card__bookmark');
-                 for (let bookmark of bookmarks) {
-                     bookmark.addEventListener('click', addToReadingList);
-                 }
+                // Attachement de l'écouteur d'événement sur les icônes bookmark
+                let bookmarks = document.getElementsByClassName('card__bookmark');
+                for (let bookmark of bookmarks) {
+                    bookmark.addEventListener('click', addToReadingList);
+                }
 
             });
     }
