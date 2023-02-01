@@ -17,11 +17,15 @@ export function createAddBookButton() {
 
 
     addBookBtn.addEventListener("click",  () => {
-        if (!displayForm) {
-            createSearchForm();
-            displayForm = true;
-            btn.disabled = true;
+        let resultDiv = document.getElementById("searchForm");
+
+        // Remove resultDiv if already exist in order to avoid having multiple time result Div displaying
+        if (resultDiv) {
+            resultDiv.remove();
         }
+        createSearchForm();
+        displayForm = true;
+        btn.disabled = true;
     });
 
     // si le clic a eu lieu sur un élément qui a la classe search-form__cancel la variable displayForm sera réinitialisée à false,
