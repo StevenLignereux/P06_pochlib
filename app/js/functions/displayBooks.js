@@ -10,13 +10,14 @@ export function displayBooks() {
         readingList.removeChild(readingList.lastChild);
     }
 
+    let bookItem = document.createElement("div");
+    bookItem.setAttribute("id", "card-container")
+    
     // Boucle pour afficher tous les livres stockés
     for (let i = 0; i < booksList.length; i++) {
         let book = JSON.parse(booksList[i]);
 
         // Création de l'élément HTML représentant le livre dans la poch'liste
-        let bookItem = document.createElement("div");
-        bookItem.setAttribute("id", "card-container")
 
         bookItem.innerHTML += `
              <div class="cards">
@@ -33,12 +34,11 @@ export function displayBooks() {
             </div>
     `;
 
-        // Ajout de l'élément à la poch'liste
-        let readingList = document.getElementById("content");
-        readingList.appendChild(bookItem);
     }
 
-
+    // Ajout de l'élément à la poch'liste
+    let readingList = document.getElementById("content");
+    readingList.appendChild(bookItem);
     document.addEventListener('click', removeFromReadingList);
 
 }
