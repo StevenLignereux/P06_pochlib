@@ -1,5 +1,5 @@
 @import "../abstracts/mixins";
-@import "../abstracts/variables";
+
 
 /* Card */
 #card-container {
@@ -20,15 +20,25 @@
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
   border-radius: 0.5rem;
 
+  @include breakpoints(sm) {
+    width: 30%;
+  }
+
+  @include breakpoints(md) {
+    width: 45%;
+  }
+
+  @include breakpoints(lg) {
+    width: 30%;
+  }
+
+
   .card {
 
     &__title {
       margin-left: 1rem;
     }
 
-    &__unavailable {
-      max-width: 30%;
-    }
 
     &__description {
       text-align: justify;
@@ -37,6 +47,23 @@
     &__author {
       font-style: italic;
     }
+
+    &__image {
+      width: 100%;
+
+      @include breakpoints(sm) {
+        max-width: 40%;
+      }
+
+      @include breakpoints(md) {
+        max-width: 50%;
+      }
+
+      @include breakpoints(lg) {
+        max-width: 70%;
+      }
+    }
+
   }
 
   .heading {
@@ -54,40 +81,4 @@
       margin-left: 4rem;
     }
   }
-
-
-  @include breakpoints(md) {
-    .search-results {
-
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .cards {
-      width: 45%;
-    }
-  }
 }
-
-@include breakpoints(sm) {
-  .cards {
-    width: 30%;
-
-    &__image {
-      max-width: 40%;
-    }
-  }
-
-}
-
-@include breakpoints(lg) {
-  .cards {
-    width: 30%;
-
-    .card__image {
-      max-width: 50%;
-    }
-  }
-
-}
-

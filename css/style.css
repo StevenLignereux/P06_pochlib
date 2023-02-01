@@ -58,23 +58,6 @@ body {
   align-items: center;
   margin: 10px 0;
 }
-#searchForm input[type=text] {
-  padding: 8px;
-  border-radius: 5px;
-  border: none;
-  margin: 0 10px;
-  flex-grow: 1;
-}
-#searchForm input[type=submit] {
-  background-color: green;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  margin: 0 10px;
-}
-
 @media (min-width: 768px) {
   #searchForm {
     display: flex;
@@ -82,15 +65,6 @@ body {
     align-items: center;
     margin: 10px 0;
     flex-direction: column;
-  }
-  input {
-    flex: 1;
-    margin-right: 10px;
-    align-items: flex-start;
-    width: 100%;
-  }
-  .button {
-    align-self: baseline;
   }
 }
 @media (min-width: 992px) {
@@ -109,6 +83,23 @@ body {
     margin: 10px 0;
   }
 }
+#searchForm input[type=text] {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  flex-grow: 1;
+}
+#searchForm input[type=submit] {
+  background-color: green;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
 /* Card */
 #card-container {
   display: flex;
@@ -128,17 +119,47 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
 }
+@media (min-width: 576px) {
+  .cards {
+    width: 30%;
+  }
+}
+@media (min-width: 768px) {
+  .cards {
+    width: 45%;
+  }
+}
+@media (min-width: 992px) {
+  .cards {
+    width: 30%;
+  }
+}
 .cards .card__title {
   margin-left: 1rem;
-}
-.cards .card__unavailable {
-  max-width: 30%;
 }
 .cards .card__description {
   text-align: justify;
 }
 .cards .card__author {
   font-style: italic;
+}
+.cards .card__image {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .cards .card__image {
+    max-width: 40%;
+  }
+}
+@media (min-width: 768px) {
+  .cards .card__image {
+    max-width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .cards .card__image {
+    max-width: 70%;
+  }
 }
 .cards .heading {
   display: flex;
@@ -152,32 +173,6 @@ body {
   flex: 1;
   font-size: 2rem;
   margin-left: 4rem;
-}
-@media (min-width: 768px) {
-  .cards .search-results {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .cards .cards {
-    width: 45%;
-  }
-}
-
-@media (min-width: 576px) {
-  .cards {
-    width: 30%;
-  }
-  .cards__image {
-    max-width: 40%;
-  }
-}
-@media (min-width: 992px) {
-  .cards {
-    width: 30%;
-  }
-  .cards .card__image {
-    max-width: 50%;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

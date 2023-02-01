@@ -39,7 +39,7 @@ export function searchAPI() {
                     }
                     newDiv.innerHTML += `
                         <div class="cards">
-                            <div class="result-div__book card ">
+                            <div class="result-div__book card">
                                 <div class="heading"  data-book-id="${id}" data-book-title="${title}"  data-book-author="${author}" data-book-description="${description}" data-book-thumbnail="${thumbnail}" >
                                     <h3 class="card__title">${title}</h3>
                                     <i class="fa-solid fa-bookmark card__bookmark"></i>

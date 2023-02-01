@@ -7,6 +7,28 @@
   align-items: center;
   margin: 10px 0;
 
+  @include breakpoints(md) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+    flex-direction: column;
+  }
+
+  @include breakpoints(lg) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  @include breakpoints(xl) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+  }
+
 
   input[type='text'] {
     padding: 8px;
@@ -29,42 +51,9 @@
 
 }
 
-@include breakpoints(md) {
-  #searchForm {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 10px 0;
-    flex-direction: column;
-  }
 
-  input {
-    flex: 1;
-    margin-right: 10px;
-    align-items: flex-start;
-    width: 100%;
-  }
 
-  .button {
-    align-self: baseline;
-  }
-}
 
-@include breakpoints(lg) {
-  #searchForm {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 10px 0;
-  }
-}
 
-@include breakpoints(xl) {
-  #searchForm {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 10px 0;
-  }
-}
+
 
