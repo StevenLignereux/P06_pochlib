@@ -144,22 +144,24 @@ body {
   }
 }
 /* Card */
-.cards {
+#testAmol {
   display: flex;
   flex-wrap: wrap;
-  /* Search Results */
-}
-.cards .card {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+}
+
+.cards {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  display: flex;
   padding: 1rem;
   margin: 0 10px;
   box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
+  /* Search Results */
 }
 .cards .card__title {
   margin-left: 1rem;
@@ -196,17 +198,11 @@ body {
   }
 }
 @media (min-width: 576px) {
-  .cards .card {
-    width: 50%;
-  }
   .cards .card__image {
     max-width: 40%;
   }
 }
 @media (min-width: 992px) {
-  .cards .card {
-    width: 25%;
-  }
   .cards .card__image {
     max-width: 70%;
   }
