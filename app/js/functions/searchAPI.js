@@ -35,7 +35,7 @@ export function searchAPI() {
                     if (book.volumeInfo.imageLinks) {
                         thumbnail = book.volumeInfo.imageLinks.thumbnail;
                     } else {
-                        thumbnail = "../../../assets/images/unavailable.png";
+                        thumbnail = "./assets/images/unavailable.png";
                     }
                     newDiv.innerHTML += `
                         <div class="cards">
