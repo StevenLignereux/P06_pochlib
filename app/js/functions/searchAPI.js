@@ -51,16 +51,14 @@ export function searchAPI() {
                             </div>
                         </div>
                 `;
-
-
-                    // Attachement de l'écouteur d'événement sur les icônes bookmark
-                    let bookmarks = document.getElementsByClassName('card__bookmark');
-                    for (let bookmark of bookmarks) {
-                        bookmark.addEventListener('click', addToReadingList);
-                    }
                 }
                 
                 resultDiv.appendChild(newDiv);
+                 // Attachement de l'écouteur d'événement sur les icônes bookmark
+                 let bookmarks = document.getElementsByClassName('card__bookmark');
+                 for (let bookmark of bookmarks) {
+                     bookmark.addEventListener('click', addToReadingList);
+                 }
 
             });
     }
