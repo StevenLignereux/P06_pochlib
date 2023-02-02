@@ -37,7 +37,6 @@ export function displayBooks() {
     }
 
     // Ajout de l'élément à la poch'liste
-    let readingList = document.getElementById("content");
     readingList.appendChild(bookItem);
     document.addEventListener('click', removeFromReadingList);
 
