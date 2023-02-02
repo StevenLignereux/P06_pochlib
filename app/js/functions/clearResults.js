@@ -1,4 +1,4 @@
-// Efface la div et les résultats de recherche
+// Remove div and clear search results
 export function clearResultDiv() {
     let resultDiv = document.getElementById("result-div");
     if (resultDiv) {

@@ -1,4 +1,3 @@
-// Ici, j'utilise les fonctions fléchées pour définir la fonction createAddBookButton et pour l'écouteur d'événement click, et const pour déclarer les variables.
 
 import {createSearchForm} from "./searchForm.js";
 
@@ -9,8 +8,8 @@ export function createAddBookButton() {
     let h2 = document.querySelector(".h2");
     h2.parentNode.insertBefore(btn, h2.nextSibling);
 
-    /*lorsque l'utilisateur clique sur le bouton "Ajouter un livre", la fonction createSearchForm sera appelée pour afficher ' +
-    'le formulaire de recherche de livre.*/
+
+    // When user click on the add book button, createSearchForm function be call for display search form
     const addBookBtn = document.querySelector('.button--green');
 
 
@@ -34,8 +33,6 @@ export function createAddBookButton() {
         });
 
     });
-
-
 
 }
 

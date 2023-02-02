@@ -3,10 +3,10 @@ import {searchAPI} from "../functions/searchAPI.js";
 import {clearResultDiv} from "../functions/clearResults.js";
 
 
-
-/*crée un formulaire avec deux champs de saisie pour le titre et l'auteur d'un livre. Les deux champs ont l'attribut ' +
-'"required" pour s'assurer qu'ils ne sont pas vides lors de la soumission. Il y a également un bouton de soumission avec ' +
-'le texte "Rechercher" pour envoyer le formulaire.*/
+/*
+    Create a form with 2 inputs (author and title). Tey have required attribut.
+    There is a submit button for send the request
+*/
 
 export function createSearchForm() {
     let form = document.createElement("form");
@@ -70,7 +70,7 @@ export function createSearchForm() {
         titleInput.value = "";
         authorInput.value = "";
 
-        // Supprime le formulaire
+
         form.remove();
     });
 

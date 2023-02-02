@@ -1,5 +1,4 @@
 
-// Créer une div pour afficher les résultats
 export function addResultDiv() {
     const form = document.getElementById("searchForm");
     const resultDiv = document.createElement("div");

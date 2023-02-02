@@ -1,15 +1,15 @@
 import {displayBooks} from "./displayBooks.js";
 
 export function addToReadingList(event) {
-    // Récupération des données du livre
+    // We get book datas
     let bookData = event.target.parentElement.dataset;
     let book = JSON.stringify(bookData);
 
-    // Stockage en session
+    // Session storage
     let books = JSON.parse(sessionStorage.getItem("books")) || [];
 
     if (books.some(b => JSON.parse(b).bookId === bookData.bookId)) {
-        // Afficher un message d'erreur si le livre a déjà été ajouté
+        // display an error message when the book is in the list
         alert("Vous ne pouvez ajouter deux fois le même livre");
         return;
     }
