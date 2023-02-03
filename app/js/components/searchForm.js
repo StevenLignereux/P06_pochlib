@@ -1,5 +1,5 @@
 import {addResultDiv} from "../functions/resultDiv.js";
-import {searchAPI} from "../functions/searchAPI.js";
+import {searchBook} from "../functions/searchBook.js";
 import {clearResultDiv} from "../functions/clearResults.js";
 
 
@@ -58,7 +58,7 @@ export const createSearchForm = () => {
             addResultDiv();
         }
 
-        searchAPI();
+        searchBook();
 
     });
 
