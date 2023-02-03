@@ -17,7 +17,7 @@ export const createAddBookButton = () => {
         }
 
         createSearchForm();
-        addBookBtn.style.display = "none;"
+        addBookBtn.style.display = "none";
 
         const cancelButton = document.getElementById("cancel-button");
         cancelButton.addEventListener("click", () => {

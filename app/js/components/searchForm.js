@@ -8,12 +8,12 @@ import {clearResultDiv} from "../functions/clearResults.js";
     There is a submit button for send the request
 */
 
-export function createSearchForm() {
-    let form = document.createElement("form");
+export const createSearchForm = () => {
+    const form = document.createElement("form");
     form.setAttribute("id", "searchForm");
 
     // create title input
-    let titleInput = document.createElement("input");
+    const titleInput = document.createElement("input");
     titleInput.setAttribute("type", "text");
     titleInput.setAttribute("id", "titleInput");
     titleInput.setAttribute("placeholder", "Titre du livre");
@@ -21,7 +21,7 @@ export function createSearchForm() {
     form.appendChild(titleInput);
 
     // create author input
-    let authorInput = document.createElement("input");
+    const authorInput = document.createElement("input");
     authorInput.setAttribute("type", "text");
     authorInput.setAttribute("id", "authorInput");
     authorInput.setAttribute("placeholder", "Auteur du livre");
@@ -29,7 +29,7 @@ export function createSearchForm() {
     form.appendChild(authorInput);
 
     // create submit button
-    let submitBtn = document.createElement("button");
+    const submitBtn = document.createElement("button");
     submitBtn.classList.add("button", "button--green", "button__text");
     submitBtn.id = "search-button";
     submitBtn.setAttribute("type", "submit");
@@ -47,7 +47,7 @@ export function createSearchForm() {
 
 
     // add form to the HTML
-    let parent = document.querySelector("#content");
+    const parent = document.querySelector("#content");
     parent.insertAdjacentElement("beforebegin", form);
 
     submitBtn.addEventListener("click", (evt) => {
