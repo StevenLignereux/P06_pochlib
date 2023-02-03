@@ -53,7 +53,7 @@ export function searchAPI() {
                                 <h3 class="card__title" >${id}</h3>
                                 <p class="card__author" >${author}</p>
                                 <p class="card__description">${description}</p>
-                                <img class="card__image" data-book-thumbnail="${thumbnail}" src="${thumbnail}" alt="${thumbnail}">
+                                <img class="card__image" data-book-thumbnail="${thumbnail}" loading="lazy" src="${thumbnail}" alt="${thumbnail}">
                             </div>
                         </div>
                 `;

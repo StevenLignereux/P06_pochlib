@@ -29,7 +29,7 @@ export function displayBooks() {
                     <h3 class="card__title">${book.bookId}</h3>
                     <p class="card__author">${book.bookAuthor}</p>
                     <p class="card__description">${book.bookDescription}</p>
-                    <img class="card__image" data-book-thumbnail="${book.bookThumbnail}" src="${book.bookThumbnail}" alt="${book.bookThumbnail}">
+                    <img class="card__image" data-book-thumbnail="${book.bookThumbnail}" loading="lazy" src="${book.bookThumbnail}" alt="${book.bookThumbnail}">
                 </div>
             </div>
     `;
