@@ -1,9 +1,10 @@
 import {removeFromReadingList} from "./removeFromReadingList.js";
 import {cardComponent} from "../components/cardComponent.js";
 
-export function displayBooks() {
+export const displayBooks = () => {
     // We take books in session
     let booksList = JSON.parse(sessionStorage.getItem("books")) || [];
+
 
     // Can be added inside function ( clearContentBookmark )
     let readingList = document.getElementById("content");
@@ -13,24 +14,26 @@ export function displayBooks() {
 
     let bookItem = document.createElement("div");
     bookItem.setAttribute("id", "card-container")
-    
+
     // Display books store in session
-    for (let i = 0; i < booksList.length; i++) {
-        let book = JSON.parse(booksList[i]);
+    for (const book of booksList) {
+        let parsedBook = JSON.parse(book);
 
         // Html element create for displaying books
 
         bookItem.innerHTML += cardComponent(
-            id,
-            title,
-            author,
-            description,
-            thumbnail,
-            false);
+            parsedBook.bookId,
+            parsedBook.bookTitle,
+            parsedBook.bookAuthor,
+            parsedBook.bookDescription,
+            parsedBook.bookThumbnail,
+            false
+        );
+
     }
 
     // Add element to the poch list
     readingList.appendChild(bookItem);
-    document.addEventListener('click', removeFromReadingList);
+    readingList.addEventListener('click', removeFromReadingList);
 
 }

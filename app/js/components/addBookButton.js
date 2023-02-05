@@ -1,39 +1,29 @@
 
 import {createSearchForm} from "./searchForm.js";
 
-export function createAddBookButton() {
-    let btn = document.createElement("button");
-    btn.classList.add("button", "button--green");
-    btn.innerHTML = '<span class="button__text">Ajouter un livre</span>';
-    let h2 = document.querySelector(".h2");
-    h2.parentNode.insertBefore(btn, h2.nextSibling);
+export const createAddBookButton = () => {
+    const h2 = document.querySelector(".h2");
 
-
-    // When user click on the add book button, createSearchForm function be call for display search form
-    const addBookBtn = document.querySelector('.button--green');
-
+    const addBookBtn = document.createElement("button");
+    addBookBtn.classList.add("button", "button--green");
+    addBookBtn.innerHTML = `<span class="button__text">Ajouter un livre</span>`;
+    h2.after(addBookBtn);
 
     addBookBtn.addEventListener("click", () => {
         let resultDiv = document.getElementById("searchForm");
 
-        // Remove resultDiv if already exist in order to avoid having multiple time result Div displaying
-        if (resultDiv) {
-            resultDiv.remove();
+        if (resultDiv){
+            resultDiv.remove()
         }
-        createSearchForm();
 
-        // Hide and display addBookbutton
+        createSearchForm();
         addBookBtn.style.display = "none";
 
-
         const cancelButton = document.getElementById("cancel-button");
-
         cancelButton.addEventListener("click", () => {
-            addBookBtn.style.display = "inline-block";
+           addBookBtn.style.display = "inline-block";
         });
-
     });
-
 }
 
 

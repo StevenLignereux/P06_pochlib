@@ -30,21 +30,19 @@ body {
   border-radius: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
-  text-align: left;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   transition: all 0.2s ease-in-out;
   align-self: baseline;
+  cursor: pointer;
 }
 .button__text {
   color: white;
 }
 .button--green {
   background-color: #469488;
-}
-.button--green__text {
-  color: white;
 }
 
 .button--cancel {

@@ -1,5 +1,5 @@
 
-export function addResultDiv() {
+export const addResultDiv = () => {
     const form = document.getElementById("searchForm");
     const resultDiv = document.createElement("div");
 
