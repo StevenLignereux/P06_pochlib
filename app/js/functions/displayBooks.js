@@ -18,7 +18,6 @@ export const displayBooks = () => {
     // Display books store in session
     for (const book of booksList) {
         let parsedBook = JSON.parse(book);
-        console.log(parsedBook)
 
         // Html element create for displaying books
 
