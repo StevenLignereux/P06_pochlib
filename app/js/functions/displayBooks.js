@@ -1,4 +1,5 @@
 import {removeFromReadingList} from "./removeFromReadingList.js";
+import {cardComponent} from "../components/cardComponent.js";
 
 export const displayBooks = () => {
     // We take books in session
@@ -17,23 +18,18 @@ export const displayBooks = () => {
     // Display books store in session
     for (const book of booksList) {
         let parsedBook = JSON.parse(book);
+        console.log(parsedBook)
 
         // Html element create for displaying books
 
-        bookItem.innerHTML += `
-             <div class="cards">
-                <div class="result-div__book card">
-                    <div class="heading">
-                        <h3 class="card__title">${parsedBook.bookTitle}</h3>
-                         <i class="fa-solid fa-trash card__bookmark" id="trash"></i>
-                    </div>
-                    <h3 class="card__title">${parsedBook.bookId}</h3>
-                    <p class="card__author">${parsedBook.bookAuthor}</p>
-                    <p class="card__description">${parsedBook.bookDescription}</p>
-                    <img class="card__image" data-book-thumbnail="${parsedBook.bookThumbnail}" loading="lazy" src="${parsedBook.bookThumbnail}" alt="${parsedBook.bookThumbnail}">
-                </div>
-            </div>
-    `;
+        bookItem.innerHTML += cardComponent(
+            parsedBook.bookId,
+            parsedBook.bookTitle,
+            parsedBook.bookAuthor,
+            parsedBook.bookDescription,
+            parsedBook.bookThumbnail,
+            false
+        );
 
     }
 
