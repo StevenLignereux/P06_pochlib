@@ -1,4 +1,4 @@
-import {addResultDiv} from "../functions/resultDiv.js";
+import {addResultDiv} from "./resultDiv.js";
 import {searchBook} from "../functions/searchBook.js";
 import {clearResultDiv} from "../functions/clearResults.js";
 

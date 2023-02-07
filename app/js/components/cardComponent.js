@@ -13,7 +13,7 @@ export const cardComponent = (id, title, author, description, thumbnail, isSearc
                     <h3 class="card__title">${title}</h3>
                     <i class="fa-solid fa-bookmark card__bookmark"></i>
                 </div>
-                <h3 class="card__title" >${id}</h3>
+                <h3 class="card__title">${id}</h3>
                 <p class="card__author" >${author}</p>
                 <p class="card__description">${description}</p>
                 <img class="card__image"
